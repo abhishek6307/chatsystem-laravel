@@ -116,7 +116,9 @@
                             <label for="">Select User</label>
                             <select class="form-control" id="create-data" aria-label="Default select example" multiple="">
                                 <option class="btn-primary" selected>Open this select menu</option>
-                                <option value="1">Abhishek</option>
+                                @foreach($users as $user)
+                                <option value="{{$user->id}}">{{$user->name}}</option>
+                                @endforeach
                             </select>
                         </fieldset>
                     </form>
